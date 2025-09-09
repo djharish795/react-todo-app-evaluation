@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-todo-app-evaluation/static/css/main.226bae26.css",
+    "main.js": "/react-todo-app-evaluation/static/js/main.84dc8f98.js",
+    "index.html": "/react-todo-app-evaluation/index.html",
+    "main.226bae26.css.map": "/react-todo-app-evaluation/static/css/main.226bae26.css.map",
+    "main.84dc8f98.js.map": "/react-todo-app-evaluation/static/js/main.84dc8f98.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.226bae26.css",
+    "static/js/main.84dc8f98.js"
+  ]
+}
