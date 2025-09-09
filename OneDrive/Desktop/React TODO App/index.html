@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Todo App - Redirecting...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        h1 { font-size: 2.5em; margin-bottom: 20px; }
+        p { font-size: 1.2em; margin: 20px 0; }
+        .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1.1em;
+            margin: 10px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: white;
+            color: #667eea;
+        }
+        .status {
+            background: rgba(0, 255, 0, 0.2);
+            border: 1px solid rgba(0, 255, 0, 0.5);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .features {
+            margin-top: 30px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        .buttons {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 React Todo App</h1>
+        <div class="status">
+            <h3>✅ Deployment Successful!</h3>
+            <p>Your React Todo App is now live on GitHub Pages</p>
+        </div>
+        
+        <div class="spinner"></div>
+        
+        <p>Setting up your advanced task management application...</p>
+        
+        <div class="buttons">
+            <a href="https://github.com/djharish795/react-todo-app-evaluation" class="btn">
+                📂 View Source Code
+            </a>
+            <a href="./build/index.html" class="btn">
+                🎯 Launch App
+            </a>
+        </div>
+        
+        <div class="features">
+            <h4>✨ Features Include:</h4>
+            <p>• Advanced Task Management • Priority System • Smart Filtering<br>
+            • Mobile Responsive • Accessibility Features • Real-time Updates</p>
+        </div>
+    </div>
+
+    <script>
+        // Auto-redirect to the React app after 3 seconds
+        setTimeout(() => {
+            window.location.href = './build/index.html';
+        }, 3000);
+        
+        // Update status every second
+        let dots = 0;
+        setInterval(() => {
+            dots = (dots + 1) % 4;
+            const loading = 'Loading' + '.'.repeat(dots);
+            document.querySelector('p').textContent = `${loading} Setting up your advanced task management application...`;
+        }, 500);
+    </script>
+</body>
+</html>
