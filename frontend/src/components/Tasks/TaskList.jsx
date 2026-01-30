@@ -17,10 +17,6 @@ const TaskList = () => {
     search: ''
   });
 
-  useEffect(() => {
-    fetchTasks();
-  }, [filters]);
-
   const fetchTasks = async () => {
     setLoading(true);
     setError('');
@@ -39,6 +35,11 @@ const TaskList = () => {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchTasks();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filters]);
 
   const handleCreateTask = async (taskData) => {
     try {
